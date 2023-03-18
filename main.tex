@@ -1,0 +1,42 @@
+\documentclass[openany]{book}
+
+\usepackage{etoolbox}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage{subfig}
+
+\makeatletter
+\patchcmd{\@maketitle}{\newpage}{}{}{} 
+
+\renewcommand{\@makeschapterhead}[1]{
+	{\noindent\raggedright\normalfont
+		\huge\bfseries 
+		#1\par\nobreak}
+	\vspace{\baselineskip}
+}
+
+\makeatother
+
+\begin{document}
+
+\author{https://github.com/HilalNazli/AcilDurumCantasiHK}
+\title{Acil Durum Çantası\\Hazırlama Klavuzu}
+\date{Mart 2023\\v1.0.0}
+
+\maketitle
+
+\include{./chapters/introduction}
+\include{./chapters/bagContents}
+\include{./chapters/hygiene}
+\include{./chapters/emergencyToilet}
+\include{./chapters/food}
+\include{./chapters/shelter}
+\include{./chapters/electricsLighting}
+\include{./chapters/firstAidKit}
+\include{./chapters/others}
+\include{./chapters/babyAndToddler}
+
+\backmatter
+% bibliography, glossary and index would go here.
+
+\end{document}
